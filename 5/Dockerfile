@@ -61,7 +61,7 @@ RUN set -x \
 	\
 # ensure the default configuration is useful when using --link
 	&& sed -ri "s!^(\#\s*)?(elasticsearch\.url:).*!\2 'http://elasticsearch:9200'!" /etc/kibana/kibana.yml \
-	&& grep -q "^elasticsearch\.url: 'http://elasticsearch:9200'\$" /etc/kibana/kibana.yml
+	&& grep -q "^elasticsearch\.url: 'http://13.73.20.14:9200'\$" /etc/kibana/kibana.yml
 
 ENV PATH /usr/share/kibana/bin:$PATH
 
